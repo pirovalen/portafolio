@@ -1,0 +1,264 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.navbar-nav {
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.navbar-collapse {
+    justify-content: center; 
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content:end;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #6a0dad;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #20b2aa;
+}
+
+#about, #skills, #projects, #footer {
+    scroll-margin-top: 20px; 
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #6a0dad 70%, #20b2aa 30%);
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap:25px;
+}
+
+.hero-content {
+    padding-top: 60px;
+    padding-left: 60px;
+}
+
+.hero-content h1, .hero-content p {
+    margin: 0; 
+    max-width: 350px;
+}
+
+.circle-img {
+    margin-top: 60px;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 5px solid #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 20px ;
+    }
+
+    .circle-img {
+      width: 20vw ;
+      height: 20vw;
+      margin-top: 60px;
+    }
+
+    .circle-img img {
+        width: 100%; 
+        height: auto; 
+        display: block; 
+    }
+
+    .hero-content h1, .hero-content p  {
+        max-width: 300px;
+        margin: 30px -65px; 
+        text-align: center; 
+    }
+}
+
+/* Primary Content */
+#about {
+    padding: 60px 20px;
+}
+
+.text-left {
+    text-align: left; 
+    margin: 0 auto; 
+    max-width: 550px; 
+    padding-bottom: 50px;
+}
+@media (max-width: 576px) {
+    .text-left{
+        max-width: 260px;
+    }
+}
+
+/* Features */
+#skills {
+    padding: 60px 20px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+.skill-item i {
+    font-size: 30px;
+    color: #6a0dad;
+    transition: color 0.3s;
+}
+
+.skill-item:hover i {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+    .skill-item {
+        width: calc(33.33% - 30px); 
+    }
+}
+
+/* Secondary Content */
+#projects {
+    padding: 60px 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    margin-bottom: 20px; 
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.btn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #6a0dad;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #00bcd4;
+}
+
+/* Footer */
+#footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #6a0dad;
+    color:#fff
+}
+
+.social-links a {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00bcd4;
+}
+
+/* Scroll to Top Btn */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #6a0dad;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+    background-color: #00bcd4; 
+}
